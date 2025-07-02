@@ -20,11 +20,10 @@ pipeline {
                     }
                 }
             }
-            stage ('sonar_quality_gate') {
-                steps {
-                    timeout(10) {
-                    }
-                    waitForQualityGate true
+             stage('Sonar Quality Gate') {
+            steps {
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
                     }
             }
             stage ('deploy') {
