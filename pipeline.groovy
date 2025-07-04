@@ -34,7 +34,7 @@ pipeline {
                 docker pull avigupta63/student-ui:latest
 
                 # Run container on port 8081 -> 8080
-                docker run -d --name student-ui -p 8081:8080 avigupta63/student-ui:latest
+                docker run -d --name student-ui -P avigupta63/student-ui:latest
                 '''
             }
         }
