@@ -2,7 +2,7 @@
     agent any
   stages {
      stage('git_checkout') {
-      steps {
+       {
       git branch: 'main', url: 'https://github.com/avigupta63/student-ui-doc.git'
 
      }
